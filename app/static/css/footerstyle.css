@@ -4,7 +4,7 @@
   min-height: 4em;
   width: 100%;
   bottom: 0;
-  position: relative; 
+  position: relative;
 }
 
 #FooterGreenStripe{
@@ -12,4 +12,28 @@
   width: 100%;
   background-color: #73e55b;
   margin-top: 4em;
+}
+.footerText{
+  font-size: 1.2em;
+  color: white;
+  font-family: 'Josefin Slab', serif;
+}
+.footerLink{
+  text-decoration: none;
+  color: white;
+}
+.footerLink:hover{
+  text-decoration: none;
+  color: white;
+}
+#leftFooterSection{
+  padding-left: 0em;
+}
+#FooterContent{
+  margin-top: 1em;
+}
+.socialIcons{
+  height:3em;
+  padding-bottom: .5em;
+  padding-left: 2em;
 }
