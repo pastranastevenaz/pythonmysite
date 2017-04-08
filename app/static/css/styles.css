@@ -1,0 +1,37 @@
+html{
+
+}
+body{
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.GreenText{
+  color: #73e55b;
+}
+
+#content{
+  min-height: 69vh;
+}
+
+hr{
+  width: 80%;
+}
+hr#StyledHr {
+  margin-top: 5em;
+  height: 30px;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr#StyledHr:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
