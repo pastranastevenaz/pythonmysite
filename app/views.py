@@ -7,21 +7,18 @@ from app import app
 def index():
     return render_template('index.html')
 
-# from app import app
-# from .forms import LoginForm
-#
-# @app.route('/')
-# @app.route('/index')
-# def index():
-#
-#     return render_template('index.html',
-#                            title='Home',
-#                            user=user,
-#                            posts= posts,
-#                            hobbies = hobbies)
-#
-#
-#
-# @app.route('/posts')
-# def posts():
-#     return "Hello from posts"
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
+
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')

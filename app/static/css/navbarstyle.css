@@ -8,6 +8,18 @@
   border-radius: 100% !important;
 }
 
+#homeLinkDiv{
+  padding-top: 2em !important;
+  margin-top: 3em !important;
+}
+
+#homeLink{
+  text-decoration: none;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.2em;
+  color: white;
+}
+
 #navLinks{
   text-decoration: none;
   font-family: 'Julius Sans One', sans-serif;

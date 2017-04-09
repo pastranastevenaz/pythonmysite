@@ -37,3 +37,9 @@
   padding-bottom: .5em;
   padding-left: 2em;
 }
+/*.socialIcons:hover{
+  -webkit-box-shadow: 3px 4px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 4px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 3px 4px 13px 0px rgba(0,0,0,0.75);
+border-radius: 100%;
+}*/

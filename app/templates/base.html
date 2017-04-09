@@ -21,6 +21,11 @@
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/navbarstyle.css') }}">
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/footerstyle.css') }}">
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/home.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/about.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/projects.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/blog.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/contact.css') }}">
+
 
 </head>
 <body>
@@ -34,16 +39,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img id="NavigationBarImage" src="http://i.imgur.com/kltKc8d.jpg" ></a>
+          <a class="navbar-brand" href="{{ url_for('index') }}"><img alt="Brand" id="NavigationBarImage" src="http://i.imgur.com/kltKc8d.jpg" ></a>
         </div>
+
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="navLinks" href="#">About</a></li>
-            <li><a id="navLinks" href="#">Projects</a></li>
-            <li><a id="navLinks" href="#">Blog</a></li>
-            <li><a id="navLinks" href="#">Contact</a></li>
+            <li><a id="navLinks" href="{{ url_for('about') }}">About</a></li>
+            <li><a id="navLinks" href="{{ url_for('projects') }}">Projects</a></li>
+            <li><a id="navLinks" href="{{ url_for('blog') }}">Blog</a></li>
+            <li><a id="navLinks" href="{{ url_for('contact') }}">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -63,7 +70,7 @@
         <div class="row">
           <div class="col-sm-5" id="leftFooterSection">
             <center>
-              <p class="footerText">stevenanton.io | <a class=footerLink href="mailto:someone@example.com">steven.antonio.dev@gmail.com</a></p>
+            <p class="footerText"><a href="{{ url_for('index') }}" class="footerLink">stevenanton.io</a> | <a class=footerLink href="mailto:someone@example.com">steven.antonio.dev@gmail.com</a></p>
             </center>
           </div>
           <div class="col-sm-2" id="middleFooterSection">
