@@ -1,0 +1,28 @@
+.blog-section{
+  padding-top: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.blog-credits{
+  text-align: right;
+  margin-top: 1.6em;
+  font-size: 1.2em;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #111;
+}
+
+.green-link{
+  text-decoration: none;
+  color: #73e55b;
+}
+.green-link:hover{
+  text-decoration: none;
+  color: #73e55b;
+}
+.green-link:visited{
+  text-decoration: none;
+  color: #73e55b;
+  border-bottom:0px solid #000;
+
+}

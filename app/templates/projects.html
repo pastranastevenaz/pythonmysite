@@ -1,4 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-  <p>projects</p>
+<div class="about-content">
+  <div class="container">
+    <center><p id="page-title">Projects</p></center>
+    <center><p id="page-subtitle">Projects are never finished, but these are some I'm working on.</p></center>
+    <hr id="StyledHr" />
+    <div class="projects-section">
+      <center><p class="section-header">Website: StevenAnton.io</p></center>
+      <p class="section-text">This site was built using Python and flask to serve up the static pages. It’s hosted on Heroku. This project was fairly easy to put together. There really is no much going on at the server side, other than routing and template serving using Flask-WTF. The front end is basic HTML and CSS. I have no JavaScript, other than Bootstrap CSS framework’s JavasScript.<br><br>
+      Eventually I’d like to add some more front and back end functionality. At a minimum I’d like to add comments and votes to the blog section. That seems like it could be a fun little addition.<br><br>
+      This page will eventually change as well. I intend to change the structure and layout of the projects section. I’d like to give each project it’s own page. More to come soon! </p>
+      </div>
+    <hr id="StyledHr" />
+  </div>
+</div>
 {% endblock %}
