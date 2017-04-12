@@ -1,7 +1,7 @@
 .blog-section{
-  padding-top: 2em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 2em;
+  padding-top: 1em;
+  padding-right: 1em;
 }
 
 .blog-credits{
@@ -26,6 +26,21 @@
   border-bottom:0px solid #000;
 }
 
+
+.videoWrapper {
+  position: relative;
+
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+
+  padding-top: 25px;
+}
+.videoWrapper iframe {
+  position: absolute;
+
+  width: 100%!important;
+
+  height: 100%!important;
+}
 
 
 /* Code Styles */
