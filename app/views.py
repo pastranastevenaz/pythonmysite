@@ -19,6 +19,10 @@ def projects():
 def blog():
     return render_template('blog.html')
 
+@app.route('/blog/blog041201701')
+def blog041201701():
+    return render_template('blog041201701.html')
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
