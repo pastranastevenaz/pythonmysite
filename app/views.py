@@ -15,6 +15,10 @@ def about():
 def projects():
     return render_template('projects.html')
 
+@app.route('/projects/connectiontest')
+def connectiontest():
+    return render_template('connectiontest.html')
+
 @app.route('/blog')
 def blog():
     return render_template('blog.html')

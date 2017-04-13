@@ -1,0 +1,75 @@
+.project-card{
+  border-style:none;
+  margin-left: -6px;
+  margin-right: -6px;
+}
+.project-card:hover{
+  -webkit-box-shadow: 2px 2px 4px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 4px -2px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 4px -2px rgba(0,0,0,0.75);
+
+}
+.project-card:active{
+  -webkit-box-shadow: inset 2px 2px 4px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 2px 2px 4px -2px rgba(0,0,0,0.75);
+  box-shadow: inset 2px 2px 4px -2px rgba(0,0,0,0.75);
+}
+.project-image{
+  overflow: hidden;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eee;
+
+
+}
+.projectPicture{
+  max-width: 100%;
+}
+.project-image img {
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.project-image img:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-filter: blur(1px);
+}
+
+.project-text{
+  display: block;
+  position: relative;
+  /*display: flex;*/
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eee;
+  height: 10em;
+  /*flex-direction: column;*/
+}
+.project-title{
+  font-family: 'Julius Sans One', sans-serif;
+  font-size:1.8em;
+  color: #555;
+}
+.project-title:hover{
+  text-decoration: none;
+  color: #555;
+
+}
+.project-info{
+  margin-top: 1em;
+  font-size: 1.1yem;
+  font-family: 'Josefin Slab', serif;
+  line-height: 1.2em;
+  color: #333;
+  letter-spacing: .15em;
+}
+.project-tech{
+  font-family: 'Julius Sans One', sans-serif;
+  font-size:1em;
+  color: #73e55b;
+  margin-top:2.5em;
+}
+.project-tech:hover{
+  color: #73e55b;
+  text-decoration: none;
+}

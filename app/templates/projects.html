@@ -8,10 +8,94 @@
     <div class="projects-section">
       <center><p class="section-header">Website: StevenAnton.io</p></center>
       <p class="section-text">This site was built using Python and flask to serve up the static pages. It’s hosted on Heroku. This project was fairly easy to put together. There really is no much going on at the server side, other than routing and template serving using Flask-WTF. The front end is basic HTML and CSS. I have no JavaScript, other than Bootstrap CSS framework’s JavasScript.<br><br>
-      Eventually I’d like to add some more front and back end functionality. At a minimum I’d like to add comments and votes to the blog section. That seems like it could be a fun little addition.<br><br>
-      This page will eventually change as well. I intend to change the structure and layout of the projects section. I’d like to give each project it’s own page. More to come soon! </p>
+        Eventually I’d like to add some more front and back end functionality. At a minimum I’d like to add comments and votes to the blog section. That seems like it could be a fun little addition.<br><br>
+        This page will eventually change as well. I intend to change the structure and layout of the projects section. I’d like to give each project it’s own page. More to come soon! </p>
       </div>
-    <hr id="StyledHr" />
-  </div>
-</div>
-{% endblock %}
+      <hr id="StyledHr" />
+
+      <div class="row">
+
+        <div class="col-sm-4">
+          <div class="project-card">
+            <div class="project-image">
+              <!-- <a href="{{ url_for('connectiontest') }}"> -->
+              <a href="https://github.com/pastranastevenaz/speedtest">
+              <center>
+                <img src="/static/img/connectionpass.png">
+              </center>
+            </a>
+            </div>
+            <div class="project-text">
+              <center>
+                <a class="project-title" href="https://github.com/pastranastevenaz/speedtest">Connection Test</a>
+                <p class="project-info">A connection test Gui widget</p>
+                <p class="project-tech">
+                  <b><a class="project-tech" href="https://www.ruby-lang.org">Ruby</a></b>
+                  <span class="project-info">|</span>
+                  <b><a class="project-tech" href="https://glade.gnome.org/">GLADE</a></b>
+                  <span class="project-info">|</span>
+                  <b><a class="project-tech" href = "http://visualruby.net/">Visual Ruby</a></b>
+                  <span class="project-info">|</span>
+                  <b><a class="project-tech" href="https://www.gtk.org/">GTK</a></b></p>
+                </center>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-4">
+            <div class="project-card">
+              <div class="project-image">
+                <a href="https://www.givingtrunkco.com">
+                <center>
+                  <img class="projectPicture" src="/static/img/gtnkhomefull.jpg">
+                </center>
+              </a>
+              </div>
+              <div class="project-text">
+                <center>
+                  <a class="project-title" href="https://www.givingtrunkco.com">Giving Trunk Co</a>
+                  <p class="project-info">A non profit website</p>
+                  <p class="project-tech">
+                    <b><a class="project-tech" href="https://www.shopify.com/">Shopify</a></b>
+                    <span class="project-info">|</span>
+                    <b><a class="project-tech" href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></b>
+                    <span class="project-info">|</span>
+                    <b><a class="project-tech" href = "https://galleria.io/">Galleria.js</a></b>
+                    <span class="project-info">|</span>
+                    <b><a class="project-tech" href="https://shopify.github.io/liquid/">Liquid</a></b></p>
+                  </center>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="project-card">
+                <div class="project-image">
+                  <a href="https://github.com/pastranastevenaz/congress_info_sinatra">
+                  <center>
+                    <img src="/static/img/congressinfohomefull.jpg">
+                  </center>
+                </a>
+                </div>
+                <div class="project-text">
+                  <center>
+                    <a class="project-title" href="http://www.govsheets.us/">Congress Info</a>
+                    <p class="project-info">Converts JSON API to CSV</p>
+                    <p class="project-tech">
+                      <b><a class="project-tech" href="https://www.ruby-lang.org">Ruby</a></b>
+                      <span class="project-info">|</span>
+                      <b><a class="project-tech" href="https://aws.amazon.com/s3/">AWS S3</a></b>
+                      <span class="project-info">|</span>
+                      <b><a class="project-tech" href = "http://www.sinatrarb.com/">Sinatra</a></b>
+                      <span class="project-info">|</span>
+                      <b><a class="project-tech" href="https://www.heroku.com">Heroku</a></b></p>
+                    </center>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+    {% endblock %}
