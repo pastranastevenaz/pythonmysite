@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="about-content">
+  <div class="container">
+    <center><p id="page-title">Why I Love Python</p></center>
+    <hr id="StyledHr" />
+    <div class="blog-section">
+      <p class="section-text">I won’t lie to you. I’m not a programming wizard, phenom, or whatever colloquial term you’d like to use to describe someone who can program themselves out of a dark room with their arms tied behind their backs. I’ve been programming for roughly a year(as of writing this blog post). You always hear that it’s best to focus on one language or framework and get good at it. I did the opposite. I’ve dabbled. I’ve dabbled quite a bit. Initially, what got me interested in programming was a desire to develop Android applications. Obviously, I jumped on the Android SDK train. Oh wait!!! I have to learn Java first. Ok. Let’s take a step back and learn Java.
+        <br><br>  I toyed with Java for some time. Eventually. As a beginner, I got overwhelmed with the entire Android ecosystem. Eventually I tinkered with PHP. I learned how to connect to databases. As I started to learn about frameworks, I toyed with Ruby and the Rails framework. Ruby was interesting. I enjoyed how little one had to write, in order to make the computer do things. The only problem was, I simply couldn't understand the syntax. IT was frustrating. To this day, Ruby still looks like an alien language. Moreover, Ruby seems to have been handicapped by its prevalence in the web development community. Its libraries, or gems, as they’re called, offer tons of solutions for web development, but lack elsewhere
+        <br><br> At some point I thought it would be great to start picking up some JavaScript. Sure, I get it. I get why people like it. The frameworks are exciting. Also, there are so many ways to do things, it can feel liberating. I recently picked up a book called “If Hemingway wrote JavaScript”. The premise of the book was to guess how famous authors would solve different algorithm challenges using JavaScript, based on their writing style. I surely enjoyed the book. However, it illustrates a frustration I’ve had with JavaScript. There is just too much open road. Of course, that last statement was purely opinion. There are some that really like that about JavaScript.
+        <br><br> Moving forward, after much convincing, I finally decided to try my hand at Python. I barely remember the reason for my resistance to trying it. Perhaps it was because I was afraid to keep jumping from language to language. All I can say is, I wish I would have done so earlier. I’ve been playing with Python for only a few weeks. Only a few hours once or twice a week so far. So far, I’ve fallen in love with it.
+        <br><br><br>Why???
+        <br><br><br>Like Ruby, the syntax is not very verbose. There’s much less typing, when compared to other language. However, unlike Ruby, it’s easily readable. As someone who initially picked up Java, the syntax comes across like Java, without the syntactical bloat. Plus, I’m not forced into OOP. The best of of Python, from someone who’s only interacted with it recently, is the standard library. Python’s standard library does so much for us. Someone who’s only used Python may take it for granted, but there is simply so little code one needs to type in order to make things happen.
+        <br><br>Let’s look at an example. We’ll look at a common task in programming. We have a text file named textfile.txt. To keep things simple, it’s got one column of values. Those values can be anything, In this case, we’ll say they are names. Our goal is to read that file, and assign the contents of the file to a data structure. Once the contents of the file are in the data structure, we can do whatever we like with it. However, that initial task is getting the data into that data structure. Let’s look at how we can do that.
+        <br><br><br>First in Java</p>
+        <br><br><br>
+        <div id="codeSnippet">
+          <pre><code><script type="text/javascript">
+
+          $(document).ready(function() {
+            $('.slideshow').cycle({
+              fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+            });
+          });
+          </script>
+
+          import java.util.*;
+          import java.io.*;
+          import java.nio.file.*;
+
+          // In Java we’re pretty much forced into OOP
+          Public class MyClass{
+
+            // here we declare our working ArrayList.
+            ArrayList<String> myArrayList = new ArrayList<String>();
+
+              //This is the heart of our app. It reads the file and populate the ArrayList
+              public void populateArrayList(){
+                // we state the file we are using to read from
+                Path file = Paths.get("./textfile.txt");
+                InputStream input = null;
+                try{
+                  input = Files.newInputStream(file);
+                  BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+                  String s = null;
+                  s = reader.readLine();
+                  do{
+                    realEstateArrayList.add(s);
+                  }while((s = reader.readLine())!= null);
+                  reader.close();
+                }catch(IOException e){
+                  System.out.println(e);
+                }
+              }
+
+
+              // here we have the main method. The starting point of our app
+              public static void main(String[] args){
+                // here we initialize an instance of our class, in order to use its methods
+                MyClass app = new MyClass();
+                Call the class’ createArrayList method
+                app.populateArrayList();
+              }
+            }
+
+
+          </code>
+        </pre>
+      </div>
+
+      <br><br><p class="section-text">I’ll have you know, I took a 15 minute break after writing all that Java code. Let’s see how we do that in Python.
+        <br><br><br>
+      </p>
+
+      <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+
+        # here we declare our working list
+        myList = []
+
+        # we state the file we are using to read from and assign it to a variabe
+        file = open("textfile.txt")
+
+        # we iterate through that file variable and append each value to our list
+        for n in file:
+          myList.append(n)
+
+      </code>
+    </pre>
+  </div>
+
+  <br><br><p class="section-text">
+    That’s it. 22 lines of code in Java. Compare that to the 4 lines it took to do the same in Python. It’s astounding! The boost in productivity one can gain from simply picking up this language is amazing. It’s an order of magnitude increase in productivity we’ve gained just in this example.
+<br><br>I didn’t get into programming because I wanted to be a computer whiz. I’ve never had the goal of being a programming prodigy. I got into programming because i wanted to create. Python allows me to do just that, while also allowing the freedom to get my hands really dirty if I want to. All I can say is, thank you Guido. If you’ve yet to try programming in Python, do yourself a favor and do so yesterday.
+  </p>
+
+
+
+
+
+  <p class="blog-credits">April 12, 2017</p>
+</div>
+<hr id="StyledHr" />
+</div>
+</div>
+{% endblock %}

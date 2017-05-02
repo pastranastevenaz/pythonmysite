@@ -23,9 +23,13 @@ def connectiontest():
 def blog():
     return render_template('blog.html')
 
-@app.route('/blog/blog041201701')
-def blog041201701():
-    return render_template('blog041201701.html')
+@app.route('/blog/blog0412201701')
+def blog0412201701():
+    return render_template('blog0412201701.html')
+
+@app.route('/blog/blog0502201701')
+def blog0502201701():
+    return render_template('blog0502201701.html')
 
 @app.route('/contact')
 def contact():
