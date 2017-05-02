@@ -2,17 +2,25 @@
 {% block content %}
 <div class="about-content">
   <div class="container">
-    <center><p id="page-title">Why I Love Python</p></center>
+    <center><p id="page-title">Playing with Pokemon, APIs and spreadsheets</p></center>
     <hr id="StyledHr" />
     <div class="blog-section">
-      <p class="section-text">I won’t lie to you. I’m not a programming wizard, phenom, or whatever colloquial term you’d like to use to describe someone who can program themselves out of a dark room with their arms tied behind their backs. I’ve been programming for roughly a year(as of writing this blog post). You always hear that it’s best to focus on one language or framework and get good at it. I did the opposite. I’ve dabbled. I’ve dabbled quite a bit. Initially, what got me interested in programming was a desire to develop Android applications. Obviously, I jumped on the Android SDK train. Oh wait!!! I have to learn Java first. Ok. Let’s take a step back and learn Java.
-        <br><br>  I toyed with Java for some time. Eventually. As a beginner, I got overwhelmed with the entire Android ecosystem. Eventually I tinkered with PHP. I learned how to connect to databases. As I started to learn about frameworks, I toyed with Ruby and the Rails framework. Ruby was interesting. I enjoyed how little one had to write, in order to make the computer do things. The only problem was, I simply couldn't understand the syntax. IT was frustrating. To this day, Ruby still looks like an alien language. Moreover, Ruby seems to have been handicapped by its prevalence in the web development community. Its libraries, or gems, as they’re called, offer tons of solutions for web development, but lack elsewhere
-        <br><br> At some point I thought it would be great to start picking up some JavaScript. Sure, I get it. I get why people like it. The frameworks are exciting. Also, there are so many ways to do things, it can feel liberating. I recently picked up a book called “If Hemingway wrote JavaScript”. The premise of the book was to guess how famous authors would solve different algorithm challenges using JavaScript, based on their writing style. I surely enjoyed the book. However, it illustrates a frustration I’ve had with JavaScript. There is just too much open road. Of course, that last statement was purely opinion. There are some that really like that about JavaScript.
-        <br><br> Moving forward, after much convincing, I finally decided to try my hand at Python. I barely remember the reason for my resistance to trying it. Perhaps it was because I was afraid to keep jumping from language to language. All I can say is, I wish I would have done so earlier. I’ve been playing with Python for only a few weeks. Only a few hours once or twice a week so far. So far, I’ve fallen in love with it.
-        <br><br><br>Why???
-        <br><br><br>Like Ruby, the syntax is not very verbose. There’s much less typing, when compared to other language. However, unlike Ruby, it’s easily readable. As someone who initially picked up Java, the syntax comes across like Java, without the syntactical bloat. Plus, I’m not forced into OOP. The best of of Python, from someone who’s only interacted with it recently, is the standard library. Python’s standard library does so much for us. Someone who’s only used Python may take it for granted, but there is simply so little code one needs to type in order to make things happen.
-        <br><br>Let’s look at an example. We’ll look at a common task in programming. We have a text file named textfile.txt. To keep things simple, it’s got one column of values. Those values can be anything, In this case, we’ll say they are names. Our goal is to read that file, and assign the contents of the file to a data structure. Once the contents of the file are in the data structure, we can do whatever we like with it. However, that initial task is getting the data into that data structure. Let’s look at how we can do that.
-        <br><br><br>First in Java</p>
+      <p class="section-text"><i>What I’ve always found lacking is access to tutorials that fall somewhere in between. Why not learn how to build small but non trivial application? Learn how to use standard libraries. Learn how to effectively use the data structures we’ve learned about. I hope with this blog post I can start to do just that. </i>
+      <br><br><br>In this lesson we’re going to use the Python programming language to write a smallish script which will read from a public API, convert that information to CSV (spreadsheet) format, create a directory for our new files, and finally save our file to that new directory.
+      <br><br><br>
+      Before we get off track, I’ll go over some basic housekeeping. 
+      <ul>
+        <li><p class="section-text">I’m using <a class="green-link" href="#">Ubuntu Linux 16.04</a>. I don’t have much experience developing on other platforms, so I can’t say for certain, but you may require some minor tweaks in your code when saving files, creating directories, etc.</p></li>
+        <li><p class="section-text">Since I’m using a Linux Distro, the terminal commands may be different if you are on a different distribution or operating system altogether</p></li>
+        <li><p class="section-text">I’m using <a class="green-link" href="https://www.python.org/">Python 3.6.0</a></p></li>
+        <li><p class="section-text">This project does not follow best practices, it simply meant to build an understanding of the concepts we’re using.</p></li>
+        <li><p class="section-text">While this tutorial is not for beginners, as long as you have a basic understanding of Python, you should be okay following along. </p></li>
+        <li><p class="section-text">Have fun doing this (Most important)</p></li>
+      </ul>
+      </p>
+      <p class="section-text">
+      <br><br><br>Let’s start out by creating a parent directory for our project. Using the terminal, navigate to the directory where you keep your projects. In my case I have a directory called projects under the Documents directory, and a python directory under that.
+      </p>
         <br><br><br>
         <div id="codeSnippet">
           <pre><code><script type="text/javascript">
@@ -23,52 +31,12 @@
             });
           });
           </script>
-
-          import java.util.*;
-          import java.io.*;
-          import java.nio.file.*;
-
-          // In Java we’re pretty much forced into OOP
-          Public class MyClass{
-
-            // here we declare our working ArrayList.
-            ArrayList<String> myArrayList = new ArrayList<String>();
-
-              //This is the heart of our app. It reads the file and populate the ArrayList
-              public void populateArrayList(){
-                // we state the file we are using to read from
-                Path file = Paths.get("./textfile.txt");
-                InputStream input = null;
-                try{
-                  input = Files.newInputStream(file);
-                  BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-                  String s = null;
-                  s = reader.readLine();
-                  do{
-                    realEstateArrayList.add(s);
-                  }while((s = reader.readLine())!= null);
-                  reader.close();
-                }catch(IOException e){
-                  System.out.println(e);
-                }
-              }
-
-
-              // here we have the main method. The starting point of our app
-              public static void main(String[] args){
-                // here we initialize an instance of our class, in order to use its methods
-                MyClass app = new MyClass();
-                Call the class’ createArrayList method
-                app.populateArrayList();
-              }
-            }
-
-
+          you@yourcomputer:~$ cd Documents/projects/python
           </code>
         </pre>
       </div>
 
-      <br><br><p class="section-text">I’ll have you know, I took a 15 minute break after writing all that Java code. Let’s see how we do that in Python.
+      <br><br><p class="section-text">In that directory make a new parent folder for our new project.
         <br><br><br>
       </p>
 
@@ -80,31 +48,537 @@
           });
         });
         </script>
+          you@yourcomputer:~/Documents/projects/python$ mkdir apitutorial && cd apitutorial
+         </code>
+        </pre>
+      </div>
 
-        # here we declare our working list
-        myList = []
+  <br><br><p class="section-text">Create our main script file.</p>
+      <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            $ touch myfile.py
+         </code>
+        </pre>
+      </div>
 
-        # we state the file we are using to read from and assign it to a variabe
-        file = open("textfile.txt")
 
-        # we iterate through that file variable and append each value to our list
-        for n in file:
-          myList.append(n)
+  <br><br><p class="section-text">We’re going to first learn how to use the <a class="green-link" href="http://docs.python-requests.org/en/master/">request</a> library, and use it to request information from one of my favorite public non authenticating APIs, the Pokemon API found at<a class="green-link" href="http://pokeapi.co/"> http://pokeapi.co/</a>
 
-      </code>
-    </pre>
-  </div>
+  <br><br>Using your prefered text editor, open the mainfile.py we just made. Add the following import to the top of the file </p>
+     <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            import requests
+         </code>
+        </pre>
+      </div>
 
-  <br><br><p class="section-text">
-    That’s it. 22 lines of code in Java. Compare that to the 4 lines it took to do the same in Python. It’s astounding! The boost in productivity one can gain from simply picking up this language is amazing. It’s an order of magnitude increase in productivity we’ve gained just in this example.
-<br><br>I didn’t get into programming because I wanted to be a computer whiz. I’ve never had the goal of being a programming prodigy. I got into programming because i wanted to create. Python allows me to do just that, while also allowing the freedom to get my hands really dirty if I want to. All I can say is, thank you Guido. If you’ve yet to try programming in Python, do yourself a favor and do so yesterday.
+  <br><br><p class="section-text">What that does is import the requests library, which allows us to make http requests. It is standard practice to keep all our import statements at the top of our file. Furthermore, for this project we will only be using modules in the standard library. We will not be importing or installing any external libraries. In which case, I would recommend using a virtual environment. In this case, it’s not needed. I may cover that topic at a later date. 
+  <br><br>Let’s write our first bit of code to test connectivity. Add the following two lines of code anywhere below our import statement. 
+    <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            # This will perform the request using the get HTTP method. 
+            # We pass in the API endpoint as the parameter, and assign 
+            # the value this function to a variable called response.
+            
+            response = requests.get('http://pokeapi.co/api/v2/pokemon/1/')
+
+            # We  then call the print function on the response 
+            # variable’s status_code attribute
+
+            print(response.status_code)
+         </code>
+        </pre>
+      </div>
+
   </p>
 
+  <br><br><p class="section-text">We are expecting a 200 status responses, which means our HTTP request was successful.
+  <br><br>200 range responses are generally success responses. 400 range responses are generally client side failures. 500 range are generally server side errors. You can see a more comprehensive list of HTTP responses <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" class="green-link">here</a> 
+  <br><br>Return to the terminal, and make sure you are still in the directory our mainfile.py is in. Enter the following command to run our script. 
+  </p>
+      <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            $ python3 myfile.py
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">Create our main script file.</p>
+      <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            $ touch myfile.py
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">You should see an output of 200 in the terminal. 
+  <br><br><br>Great! Next we move on to actually retrieving some JSON from the API. 
+  <br><br><br>First, notice our new import statement. We need to import python’s <a class="green-link" href="https://docs.python.org/3/library/json.html">json</a> module. We can then call the json method on our request object to verify its content. Change the print expression to print the JSON response. 
+  </p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            import requests
+            import json
+
+            response = requests.get('http://pokeapi.co/api/v2/pokemon/1/')
+            print(response.json())
+         </code>
+        </pre>
+      </div>
+
+
+  <br><br><p class="section-text">When we next run our file, we should get a bunch of JSON information, pertaining to Bulbasaur, returned to the console. 
+  <br><br>Next we can convert our json response to string format in order to further manipulate it. Our first exercise will be to save it to t text file. In Python, this can be done by modifying the request.
+  </p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            import requests
+            import json
+
+            response = str(requests.get('http://pokeapi.co/api/v2/pokemon/1/').json())
+         </code>
+        </pre>
+      </div>
+
+
+  <br><br><p class="section-text">Before we go further, let’s dissect this expression. We’re declaring a variable called response; to it, we’re assigning our response from our requests.get() call. However, first we are calling the .json() method on the response were receiving. Finally, we are calling the built in str() function and passing our request as its parameter. What we’re left with is assigned to the response variable.
+  <br><br>We can use this variable to write to a txt file. Modify our myfile.py file as follows
+</p>
+   <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            import requests
+            import json
+
+            response = str(requests.get(‘http://pokeapi.co/api/v2/pokemon/1/’).json())
+
+            with open(‘mypokemoninfo.txt’, ‘w’) as out:
+            json.dump(response, out)
+         </code>
+        </pre>
+      </div>
+
+    <br><br><p class="section-text">This is the pythonic way to “dump” our information into a file. Let’s dissect this expression. The first line we’ve added, uses the <a class="green-link" href="https://docs.python.org/3/reference/compound_stmts.html">with</a> keyword. The with keyword is great for working with unmanaged resources like streams or json info. Its syntactical sugar takes care of managing the information and cleaning up the resources when the code is run. We then call Python’s built in<strong> open()</strong> function, and pass two parameters to it. The first parameter we pass is the path to the file we are writing to. The second parameter is the open mode. We can pass ‘r’ if we simply want to read the file. We can pass an ‘r+’ if we want to read and write. Pass ‘a’ to append, In our case we want to pass the ‘w’ mode. It allows us to overwrite, which is versatile in this situation. 
+    <br><br>The <strong>as</strong> keyword will assign any information being passed through to our newly declared <strong>out</strong> variable. The second line calls the<strong> json.dump()</strong> method, to which we pass our<strong> response</strong> variable, and our recently declared variable,<strong> out</strong>. The out variable will parse the info in<strong> response</strong> and write it to<strong> mypokemoninfo.txt</strong>
+    <br><br>Finally, the<strong> with</strong> keyword takes care of cleaning up our assets. There is no need to call any<strong> close()</strong> methods, functions, or any other housekeeping tasks. 
+    <br><br>Let’s try to run our program. From the terminal enter the following command to run our python script. 
+</p>
+ <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            $ python3 myfile.py
+         </code>
+        </pre>
+      </div>
+
+
+  <br><br><p class="section-text">Barring any errors, a few things just happened. Our code executed. It reached out to the public API. It received some information, converted its format, and assigned it to a variable It then created a new file in the same directory, and wrote the information that was stored in the variable to the newly opened file. 
+  <br><br>We’ve done quite a bit so far. Next we need to write some information to our spreadsheet. However. There’s one major thing to consider. The data we’re receiving from the API includes nested information. We can’t simply parse that info over to a CSV file. Instead, we’ll analyze the structure of the returned JSON, and decide what data we want to target, and write a line of code to write our target information to a spreadsheet. 
+  <br><br>In this case we have the luxury of the poke api website. It presents us with a great user interface to look at sample JSON output. If this is not available, one can always scan the generated text file so search for the information we seek. 
+  <br><br>Let’s first target our desired data. 
+  <br><br>We can start by modifying our request. We no longer need to convert this to a string. So let’s remove the call to the<strong> str()</strong> function. Our request should now look like so.  
+</p>
+   <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            response = requests.get('http://pokeapi.co/api/v2/pokemon/1/').json()
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">We now need our response to be in JSON format, since we’ll be iterating over it, and accessing its data. We could also remove the expression which writes our data to a txt file
+  <br><br>We’re going to target the Pokemon’s name, and its types. We can see from the API website, that each Pokemon has two types. Let’s target our data and assign it to variables. We’ll start with the name. This one is easy. The data is not nested. We can assign to a variable like so.
+  </p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            pokemon_name = response[‘name’].capitalize()
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">We declare our variable, and immediately assign the value we retrieve from the response JSON. We’re working with a dictionary. Therefore we access the data we want by giving the response object the key to the value we want. Finally, considering the Pokemon returned is a proper noun, we call the capitalize method on the string that is returned.
+  <br><br><br>The types data is nested in a list of dictionaries. We can access those nested elements like so.  
+  </p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            type_1 = response[‘types’][0][‘type’][‘name’]
+            type_2 = response[‘types’][1][‘type’][‘name’]
+         </code>
+        </pre>
+      </div>
+
+
+  <br><br><p class="section-text">Let’s print out our data in order to test our code. Including the print statements we’re adding, our file should look like so. </p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            import requests
+            import json
+
+            response = requests.get('http://pokeapi.co/api/v2/pokemon/1/').json()
+
+            pokemon_name = response['name'].capitalize()
+            type_1 = response['types'][0]['type']['name']
+            type_2 = response['types'][1]['type']['name']
+
+            print("Pokemon name: " + pokemon_name)
+            print("Type 1: " + type_1)
+            print("Type 2: " + type_2)
+         </code>
+        </pre>
+      </div>
+
+      
+
+
+  <br><br><p class="section-text">Go ahead and run the script
+</p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            $ python3 myfile.py
+         </code>
+        </pre>
+      </div>
+
+
+  <br><br><p class="section-text">The output should resemble 
+</p>
+<div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            Pokemon name: Bulbasaur
+            Type 1: poison
+            Type 2: grass
+         </code>
+        </pre>
+      </div>
+
+
+  <br><br><p class="section-text">So far, so good. We’ve succeeded in targeting our desired data. Our last step will be to save that data to a csv file. First we must import the csv module. Let’s add the import statement to the top of our file.</p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            import requests
+            import json
+            import csv		  # Newest import
+         </code>
+        </pre>
+      </div>
+  <br><br><p class="section-text">We’ll start by creating a list of our pokemon data. We’ll do this, so we can iterate over it later on.
+</p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            poke_info = [pokemon_name, type_1, type_2]
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">Next we’ll create an empty list of Pokemon. This list will hold lists of our specific pokemon’s information. Currently we’re only working with a single pokemon. However, by doing this, we are setting ourselves up to be able to work with a l</p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            my_pokemon = []
+         </code>
+        </pre>
+      </div>
+  <br><br><p class="section-text">We’ll append our current poke_info variable to the my_pokemon list. 
+</p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            my_pokemon.append(poke_info)
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">Now we’re ready to write our CSV file. The process is similar to the code we wrote earlier to write our response to a txt file.</p>
+    <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            with open('pokemoninfo.csv', 'w') as csvfile:
+              write = csv.writer(csvfile)
+              write.writerow(['Pokemon Name', 'Type 1', 'Type 2'])
+              for poke_data in my_pokemon:
+                write.writerow([poke_info[0], poke_info[1], poke_info[2]])
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">I’ll go over the differences from our prior file write operation. The third line in this block of code is writing the headers to the CSV file. We strategically place it before the for loop which will iterate through our list of my_pokemon. 
+  <br><br>Our for loop iterates through our list of Pokemon, which at this time should only be one. It accesses the poke_info list, and writes the info it contains to the CSV file. One important thing to note here is, the writerow() method only takes a single parameter. Therefore, be certain to only pass it one thing. In our case, we are passing a single list. Hence the square brackets within our method call parameters
+  <br><br>Our code should now look like so. 
+  </p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            import requests
+            import json
+            import csv
+
+            response = requests.get('http://pokeapi.co/api/v2/pokemon/1/').json()
+
+            pokemon_name = response['name'].capitalize()
+            type_1 = response['types'][0]['type']['name']
+            type_2 = response['types'][1]['type']['name']
+
+            poke_info = [pokemon_name, type_1, type_2]
+
+            my_pokemon = []
+            my_pokemon.append(poke_info)
+
+            # print(poke_info) ## WE CAN COMMENT THIS OUT ##
+
+            with open('pokemoninfo.csv', 'w') as csvfile:
+              write = csv.writer(csvfile)
+              write.writerow(['Pokemon Name', 'Type 1', 'Type 2'])
+              for poke_data in my_pokemon:
+                write.writerow([poke_info[0], poke_info[1], poke_info[2]])
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">Let’s try to run our code.</p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            $ python3 myfile.py
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">Let’s go over what just happened. Our code went out and connected to the public API. it retrieved a JSON object. We then retrieved specific data from that JSON object, assigned that data to variables, which we than wrote to a spreadsheet. 
+  <br><br><br>The final thing we’ll do is create a new folder in the current directory, to keep our files organized. In order to do that, we’l first need to import the os module. Like before, let’s add our import statement to the top of our script
+  </p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            import requests
+            import json
+            import csv
+            Import os
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">Next we’ll add a line right above the block of code that writes our CSV file
+</p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            import requests
+            import json
+            import csv
+            Import os
+         </code>
+        </pre>
+      </div>
+  <br><br><p class="section-text">Next we’ll add a line right above the block of code that writes our CSV file. Using the os module, it will create a new directory. The first parameter we pass will be the path and name of the directory we are creating. The second parameter is there so we don’t get an error if the directory exists already.</p>
+    <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            os.makedirs(‘pokespreadsheets’, exist_ok = True)
+         </code>
+        </pre>
+      </div>
+  <br><br><p class="section-text">We also need to modify the path in the first line of the block of code which writes our CSV file.</p>
+    <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            # CHANGE THIS
+            with open('pokemoninfo.csv', 'w') as csvfile:
+
+            # TO THIS
+            with open('pokespreadsheets/pokemoninfo.csv', 'w') as csvfile:
+         </code>
+        </pre>
+      </div>
+  <br><br><p class="section-text">Our code should end up looking like so.
+</p>
+  <div id="codeSnippet">
+        <pre><code><script type="text/javascript">
+        $(document).ready(function() {
+          $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+          });
+        });
+        </script>
+            import requests
+            import json
+            import csv
+            import os
+
+            response = requests.get('http://pokeapi.co/api/v2/pokemon/1/').json()
+
+            pokemon_name = response['name'].capitalize()
+            type_1 = response['types'][0]['type']['name']
+            type_2 = response['types'][1]['type']['name']
+
+            poke_info = [pokemon_name, type_1, type_2]
+
+            my_pokemon = []
+            my_pokemon.append(poke_info)
+
+            print(poke_info)
+
+
+            with open('pokespreadsheets/pokemoninfo.csv', 'w') as csvfile:
+                write = csv.writer(csvfile)
+                write.writerow(['Pokemon Name', 'Type 1', 'Type 2'])
+                for poke_data in my_pokemon:
+                    write.writerow([poke_info[0], poke_info[1], poke_info[2]])
+         </code>
+        </pre>
+      </div>
+
+  <br><br><p class="section-text">Give yourself a pat on the back. You’ve accomplished quite a bit. We analyzed our steps quite thoroughly during this tutorial. Once we’re more experienced, we can gloss over some of these details. However, when we’re learning to solve these problems, it’s always best to break them down into smaller bits.
+  <br><br>Where can we go from here? 
+  <br><br>Try to play around with the API. Try to access other bits of DATA. Try iterating through data in different ways. Be sure to check back for part two of this lesson. We’ll try to expand on what we’ve learned and add more functionality to our script, and we’ll look at adding some helper functions. </p>    
 
 
 
 
-  <p class="blog-credits">April 12, 2017</p>
+  <p class="blog-credits">May 2, 2017</p>
 </div>
 <hr id="StyledHr" />
 </div>
